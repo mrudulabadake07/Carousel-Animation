@@ -1,0 +1,52 @@
+.carousel-scene { 
+  height: 100vh; 
+  width: 100%; 
+  perspective: 1300px; 
+} 
+
+.carousel { 
+  height: 100%; 
+  width: 100%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  position: relative; 
+  transform-style: preserve-3d; 
+  animation: spin 17s linear infinite; 
+} 
+
+.carousel:hover { 
+  animation-play-state: paused; 
+} 
+
+.carousel-items { 
+  height: 25%; 
+  width: 15%; 
+  position: absolute; 
+} 
+
+.carousel-items img { 
+  height: 100%; 
+  width: 70%; 
+  object-fit: cover; 
+  border-radius: 50px;
+  border:7px solid black;
+} 
+
+@keyframes spin { 
+  from { 
+    transform: rotateY(0deg); 
+  } 
+  to { 
+    transform: rotateY(360deg); 
+  } 
+} 
+
+.carousel-items:nth-child(1){transform: rotateY(0deg) translateZ(500px);} 
+.carousel-items:nth-child(2){transform: rotateY(45deg) translateZ(500px);} 
+.carousel-items:nth-child(3){transform: rotateY(90deg) translateZ(500px);} 
+.carousel-items:nth-child(4){transform: rotateY(135deg) translateZ(500px);} 
+.carousel-items:nth-child(5){transform: rotateY(180deg) translateZ(500px);} 
+.carousel-items:nth-child(6){transform: rotateY(225deg) translateZ(500px);} 
+.carousel-items:nth-child(7){transform: rotateY(270deg) translateZ(500px);} 
+.carousel-items:nth-child(8){transform: rotateY(315deg) translateZ(500px);}
